@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from .import views
 
+
 urlpatterns = [
     path('',views.todoview , name='todoview'),
+    path('addtask/', views.addtask, name='addtask'),
+    path('deletetask/<int:taskpk>',views.deletetask, name="deletetask"),
 ]
