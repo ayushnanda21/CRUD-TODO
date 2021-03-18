@@ -18,3 +18,6 @@ def deletetask(request,taskpk):
     #code to delete from db
     TodoModel.objects.filter(id = taskpk.delete())
     return redirect(request.META['HTTP_REFERER'])
+
+def edittask(request,taskpk):
+    return render(request, "todoapp/edittask.html")
